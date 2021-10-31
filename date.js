@@ -1,5 +1,7 @@
 //jshint esversion:6
-console.log(module);
+module.exports=getDate;
+
+
 function getDate(){
 let today = new Date();
 

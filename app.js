@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const axios = require('axios');
 const date = require(__dirname+"/date.js");
 
+console.log (date);
+
 const app = express();
 let items = ["Buy food","Cook food","Eat food"];
 let workItems = [];
