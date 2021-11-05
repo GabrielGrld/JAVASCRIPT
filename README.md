@@ -5,4 +5,4 @@ Node.js and Express.js
 
  Este pequeño aplicativo fue desplegado en Heroku, link del mismo: [Todo-List](https://todo-list-1.herokuapp.com/)
 
- ![Todo-list-app](https://imgur.com/GSiIjSO)
+ ![Todo-list-app](https://i.imgur.com/GSiIjSO.jpg)
