@@ -20,7 +20,7 @@ const itemsSchema = {
   name : String
 };
 
-const itemToDoList = mongoose.model(Item, itemsSchema);
+const Item = mongoose.model("Item", itemsSchema); //Name for mongose model should be capitalized
 
 
 
