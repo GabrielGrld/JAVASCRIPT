@@ -72,9 +72,9 @@ app.get('/', function(req, res) {
 
 
 
-Item.find({}, function(err, foundItems) {
-  console.log(foundItems);
-});
+// Item.find({}, function(err, foundItems) {
+//   console.log(foundItems);
+// });
 
 
 
@@ -86,15 +86,24 @@ app.post('/', function(req, res) {
     res.redirect("/work");
 
   } else {
-
     const newItem = new Item({
       name: item
     });
-
-  newItem.save();
-
+    newItem.save();
     res.redirect("/");
   }
+});
+
+app.post("/delete", function(req, res){
+  const checkedItemId= req.body.checkbox;
+  Item.findByIdAndRemove(checkedItemId, function(err){
+    if(err){
+      console.log(err);
+    }else{
+      console.log("item deleted");
+    }
+  });
+  res.redirect("/");
 });
 
 
