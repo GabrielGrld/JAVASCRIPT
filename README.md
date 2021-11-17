@@ -17,7 +17,21 @@ backend de la aplicación, la cual esta en la capacidad de guardar la informaci�
 ingresa el usuario en la base de datos, y a su vez consulta la información y la 
 renderiza en el aplicativo en MongoDB desplegada en atlas puede ser observada en esta imagen.
 
+Se tiene una collection con el nombre **Items** donde saldrán siempre los tres items por defecto,
+y en la siguiente collection llamada **lists** donde se almacenará las listas modificables.
+
 ![Atlas MongoDB](https://i.imgur.com/vhgzoHK.jpg)
 
-También se utilizan  routing parameters de Express.js para poder crear Todo-List modificables, y esto genera una nueva
-coleccion en la base de datos que almacena para cada todo-list un nuevo documento en esa colección
+También se utilizan  routing parameters de Express.js para poder crear Todo-List modificables,
+ y esto genera una nueva coleccion en la base de datos que almacena para cada todo-list un nuevo
+ documento en esa colección
+
+En la siguiente imagen se puede apreciar que se realiza la petición get a la dirección 
+**https://todo-list-1.herokuapp.com/work** en donde el backend se encarga de crear una lista 
+de no existir, y de existir procede a buscar la información:
+
+![Work Route](https://i.imgur.com/v4DcnMu.jpg)
+
+Y la información guardada en la base de datos se puede visualizar en la siguiente imagen:
+
+![Atlas MongoDB work lists](https://i.imgur.com/Htddg4y.jpg)
