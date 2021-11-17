@@ -20,7 +20,7 @@ renderiza en el aplicativo en MongoDB desplegada en atlas puede ser observada en
 Se tiene una collection con el nombre **Items** donde saldrán siempre los tres items por defecto,
 y en la siguiente collection llamada **lists** donde se almacenará las listas modificables.
 
-![Atlas MongoDB](https://i.imgur.com/vhgzoHK.jpg)
+![Atlas MongoDB](https://i.imgur.com/vhgzoHK.jpg = 300x300)
 
 También se utilizan  routing parameters de Express.js para poder crear Todo-List modificables,
  y esto genera una nueva coleccion en la base de datos que almacena para cada todo-list un nuevo
