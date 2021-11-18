@@ -1,2 +1,6 @@
 # Dependency directory
 # node_modules #In order to deploy it to heroku
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
