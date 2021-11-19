@@ -77,7 +77,7 @@ app.get("/:customListName", function(req, res) {
 
 });
 
-// console.log(todoItems.name);
+
 
 app.get('/', function(req, res) {
 
@@ -90,7 +90,7 @@ app.get('/', function(req, res) {
         if (err) {
           console.log(err);
         } else {
-          console.log("Syccessfully saved defaul items");
+          //console.log("Syccessfully saved defaul items");
         }
       });
       res.redirect("/");
@@ -106,13 +106,6 @@ app.get('/', function(req, res) {
 });
 
 
-
-// Item.find({}, function(err, foundItems) {
-//   console.log(foundItems);
-// });
-
-
-
 app.post('/', function(req, res) {
   const item = req.body.newItem;
   const listName = req.body.list;
@@ -124,9 +117,7 @@ if(listName === "Today"){
   res.redirect("/");
 } else {
   List.findOne({name: listName}, function(err, foundList){
-    console.log("first "+foundList);
-    foundList.items.push(newItem);
-    console.log("Second "+foundList);
+    foundList.items.push(newItem);  
     foundList.save();
     res.redirect("/"+listName);
   });
@@ -144,7 +135,7 @@ if (listName === "Today"){
     if (err) {
       console.log(err);
     } else {
-      console.log("item deleted");
+      //console.log("item deleted");
     }
   });
   res.redirect("/");
